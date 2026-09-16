@@ -1,0 +1,11 @@
+# Legacy OpenAI Sites / Cloudflare Workers toolchain.
+# Not used by the Vercel (Next.js) build and kept out of the deployment
+# so framework detection never mistakes this for a Vite project.
+vite.config.ts
+.openai/
+.wrangler/
+dist/
+.vinext/
+
+# Source screenshots already processed into public/assets/catalog
+screen*.jpg
