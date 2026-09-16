@@ -14,10 +14,12 @@ const body = Manrope({
   weight: ['400', '500', '600', '700'],
 });
 
+const productionUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
+  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+  : 'https://ba-containers.leandrocaetanopivova.chatgpt.site';
+
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    'https://ba-containers.leandrocaetanopivova.chatgpt.site',
-  ),
+  metadataBase: new URL(productionUrl),
   title: 'B.A Containers | Venda de containers',
   description:
     'Containers 20GP, 40GP, 40HC e Reefer com atendimento direto e orçamento rápido pelo WhatsApp.',
